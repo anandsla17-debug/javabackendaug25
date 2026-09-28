@@ -22,6 +22,9 @@ public Staff(int staffid, String staffsubject) {
 	this.staffid = staffid;
 	this.staffsubject = staffsubject;
 }
+public Staff() {
+	
+}
 @Override
 public int hashCode() {
 	return Objects.hash(Integer.valueOf(staffid), staffsubject);
@@ -37,7 +40,16 @@ public boolean equals(Object obj) {
 	Staff other = (Staff) obj;
 	return staffid == other.staffid && Objects.equals(staffsubject, other.staffsubject);
 }
+@Override
+public String toString() {
+	return "Staff [staffid=" + staffid + ", staffsubject=" + staffsubject + "]";
+}
 
+
+public static void main(String[] args) {
+	Staff staff= new Staff();
+	System.out.println(staff);
+}
 
 
 }

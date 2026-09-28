@@ -59,6 +59,7 @@ abbstract.displaystaff();
 
 Interface in= new Interfaceimplement();
 in.a();
+in.u();
 System.out.println(in.submethod("arun","1233876"));
 		in.collectbank("abc bank", "1256", "20000");
 		in.displaybankdetials();
@@ -75,7 +76,7 @@ System.out.println(in.submethod("arun","1233876"));
 			for(String n:inputs.productname)
 		        System.out.println(n);
 		}
-	   
+	Interface.j();   
 		
 	}
 	

@@ -16,16 +16,19 @@ public class Recursion {
 	// 6  and 30 to 45  stop => end 100;
 	
 	public int  loop1(int num) {
-		if(num==6) {
-			return loop1(num+10);
-		}
-		if(num==51) {
+//		if(num==10) {
+//			return loop1(num+10);
+//		}
+		if(num==11) {
 			return 0;
 		}
 		
 		System.out.println(num);
 		return loop1(num+1);
 	}
+	
+	// 1 to 10
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
