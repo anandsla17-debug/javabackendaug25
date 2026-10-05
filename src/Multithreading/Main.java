@@ -4,9 +4,12 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException { 
 	Mythread mythread= new Mythread();
+	mythread.setPriority(Thread.MIN_PRIORITY);
+	
 	mythread.start();
-	mythread.join();
-	mythread.whiles(10);
+	
+
+	
 	
 	Thread object=new Thread() {
 		@Override
@@ -14,6 +17,7 @@ public class Main {
 			System.out.println("hello");
 		}
 	};
+	
 	object.start();
 	
 	// run =>   1to 5  => increm
@@ -36,8 +40,19 @@ public class Main {
 		}
 	};
 	
+
+	
+	
 	Thread mains= new Thread(team);
+	mains.setPriority(Thread.MAX_PRIORITY);
 	mains.start();
+	if(mythread.isAlive()) {
+		System.out.println("it is alive");
+	}
+	
+	mythread.join();
+
+	mythread.whiles(10);
 	
 	
 	}
