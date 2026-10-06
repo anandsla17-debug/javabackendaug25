@@ -1,18 +1,13 @@
 package Multithreading;
 
-public class Synchronization {
+public class Synchronization  extends SubSyn{
 	
 	
 	synchronized void team1() throws InterruptedException {
 		
 		for(int i=0; i<10; i++) {
 			System.out.println("i=>s"+i);
-//			Thread.sleep(1000);
-			
-			
-			
-			
-		
+			Thread.sleep(1000);			
 		}
 		
 		wait();
@@ -26,7 +21,7 @@ synchronized void word() throws InterruptedException {
 		
 		for(int i=0; i<10; i++) {
 			System.out.println("word"+i);
-//			Thread.sleep(1000);
+			Thread.sleep(1000);
 		}
 		wait();
 		System.out.println("after=> execute two");
@@ -65,9 +60,14 @@ synchronized void aware() {
 		});
 		
 		
+		Thread thread2= new Thread(()->{
+			synchronization.check();
+		}); 
+		
 		
 		thread.start();
 		thread1.start();
+		thread2.start();
 	Thread.sleep(2000);
 	Thread nofiy= new Thread(()->{
 		synchronization.aware();
