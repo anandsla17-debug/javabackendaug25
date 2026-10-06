@@ -1,6 +1,7 @@
 package Filehandling;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -56,6 +57,12 @@ String filename=sc.nextLine();
 		file.delete();
 		System.out.println("file is deleted");
 	}
+	
+	public void read() throws IOException {
+		FileReader fileReader= new FileReader("anand.txt");
+		String data=fileReader.readAllAsString();
+		System.out.println(data);
+	}
 	public static void main(String[] args) throws IOException{
 
 		Main m= new Main();
@@ -63,6 +70,7 @@ String filename=sc.nextLine();
 //		m.filewrite();
 //		m.fileedit();
 //		m.filedelete();
+//		m.read();
 		
 	
 	}
